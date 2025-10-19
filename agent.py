@@ -7,7 +7,7 @@ from strands import Agent
 app = FastAPI(title="Strands Agent Server", version="1.0.0")
 
 # Initialize Strands agent
-strands_agent = Agent()
+strands_agent_test = Agent()
 
 class InvocationRequest(BaseModel):
     input: Dict[str, Any]
@@ -25,7 +25,7 @@ async def invoke_agent(request: InvocationRequest):
                 detail="No prompt found in input. Please provide a 'prompt' key in the input."
             )
 
-        result = strands_agent(user_message)
+        result = strands_agent_test(user_message)
         response = {
             "message": result.message,
             "timestamp": datetime.now(timezone.utc).isoformat(),
