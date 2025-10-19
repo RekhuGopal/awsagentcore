@@ -19,22 +19,6 @@ curl -X POST http://localhost:8080/invocations \
     "input": {"prompt": "What is artificial intelligence?"}
   }'
 
-# Setup Docker buildx
-docker buildx create --use
-
-# Build the image
-docker buildx build --platform linux/arm64 -t my-agent:arm64 --load .
-
-# Test locally with credentials
-docker run --platform linux/arm64 -p 8080:8080 \
-  -e AWS_ACCESS_KEY_ID="<<>>" \
-  -e AWS_SECRET_ACCESS_KEY="<<>>" \
-  -e AWS_REGION="us-west-2" \
-  my-agent:arm64
-
-docker run -d --platform linux/arm64 -p 8080:8080 my-agent:arm64
-
-
 # Create ECR repository
 aws ecr create-repository --repository-name my-strands-agent --region us-west-2
 
