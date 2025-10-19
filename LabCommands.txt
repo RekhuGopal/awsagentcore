@@ -18,7 +18,7 @@ curl -X POST http://localhost:8080/invocations \
   -d '{
     "input": {"prompt": "What is artificial intelligence?"}
   }'
-
+================================================= AgentCore Hosting Code ======================================
 # Create ECR repository
 aws ecr create-repository --repository-name my-strands-agent --region us-west-2
 
