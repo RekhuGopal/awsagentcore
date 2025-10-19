@@ -7,7 +7,7 @@ payload = json.dumps({
 })
 
 response = agent_core_client.invoke_agent_runtime(
-    agentRuntimeArn='arn:aws:bedrock-agentcore:us-west-2:<account-id>:runtime/myStrandsAgent-suffix',
+    agentRuntimeArn='arn:aws:bedrock-agentcore:us-west-2:357171621133:runtime/strands_agent-91MEErAlsQ',
     runtimeSessionId='dfmeoagmreaklgmrkleafremoigrmtesogmtrskhmtkrlshmt',  # Must be 33+ chars
     payload=payload,
     qualifier="DEFAULT"

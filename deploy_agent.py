@@ -6,11 +6,11 @@ response = client.create_agent_runtime(
     agentRuntimeName='strands_agent',
     agentRuntimeArtifact={
         'containerConfiguration': {
-            'containerUri': '<account-id>.dkr.ecr.us-west-2.amazonaws.com/my-strands-agent:latest'
+            'containerUri': '357171621133.dkr.ecr.us-west-2.amazonaws.com/my-strands-agent:latest'
         }
     },
     networkConfiguration={"networkMode": "PUBLIC"},
-    roleArn='arn:aws:iam::<account-id>:role/AgentRuntimeRole'
+    roleArn='arn:aws:iam::357171621133:role/ETLlambdaAccessRole'
 )
 
 print(f"Agent Runtime created successfully!")
