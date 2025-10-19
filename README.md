@@ -1,2 +1,0 @@
-# awsagentcore
-AWS AgentCore Lab
